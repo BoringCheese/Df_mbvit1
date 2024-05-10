@@ -47,7 +47,7 @@ C.norm_std = np.array([0.229, 0.224, 0.225])
 
 """ Settings for network, this would be different for each kind of model"""
 C.backbone = 'DFormer-Tiny'  # Remember change the path below.
-C.pretrained_model = 'checkpoints/pretrained/DFormer_Tiny.pth.tar'
+C.pretrained_model = ''
 C.decoder = 'ham'
 C.decoder_embed_dim = 512
 C.optimizer = 'AdamW'

@@ -113,7 +113,7 @@ def main(args):
     pg = [p for p in model.parameters() if p.requires_grad]
     optimizer = optim.AdamW(pg, lr=args.lr, weight_decay=1E-2)
 
-    best_acc = 0
+    best_acc = 0.930
     for epoch in range(args.epochs):
         # train
         train_loss, train_acc, pred_0, la0 = train_one_epoch(model=model,
@@ -160,7 +160,7 @@ if __name__ == '__main__':
                         default="H:\\Df_mbvit\\datasets\\flower_data\\vision")
 
     # 预训练权重路径，如果不想载入就设置为空字符
-    parser.add_argument('--weights', type=str, default='',
+    parser.add_argument('--weights', type=str, default='H:\\Df_mbvit\\weights\\best_model.pth',
                         help='initial weights path')
     # 是否冻结权重
     parser.add_argument('--freeze-layers', type=bool, default=False)
